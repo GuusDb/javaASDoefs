@@ -1,7 +1,6 @@
 package ui;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class OefFruitMap_opgave {
 
@@ -11,7 +10,8 @@ public class OefFruitMap_opgave {
         {"peche", "lichi", "kriek", "kers", "papaya"}};
 
         List<String> list = new ArrayList<>();
-        Scanner in = new Scanner(System.in);
+        @SuppressWarnings("resource")
+		Scanner in = new Scanner(System.in);
 
         //declaratie + creatie map
         //------------------------------

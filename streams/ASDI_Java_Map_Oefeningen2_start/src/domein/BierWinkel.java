@@ -26,7 +26,7 @@ public class BierWinkel {
     
 
     //TODO type Map aanvullen
-    public Map opzettenOverzichtBierenPerSoort() {
+    public Map<String, List<Bier>> opzettenOverzichtBierenPerSoort() {
        //TODO
     	
     	return bieren.stream().collect(Collectors.groupingBy(Bier::getSoort, TreeMap::new, Collectors.toList()));
