@@ -32,7 +32,7 @@ public class OefFruitMap_opgave {
  telkens de bijhorende prijs, die je mee in de boom opbergt.*/
         //------------------------------------------------------------
         fruit.forEach((k,v) ->{
-            System.out.printf("Prijs van %s : ", k,v);
+            System.out.printf("Prijs van %s : ", k);
             double prijs = in.nextDouble();
             fruit.replace(k, prijs);
             System.out.println();
