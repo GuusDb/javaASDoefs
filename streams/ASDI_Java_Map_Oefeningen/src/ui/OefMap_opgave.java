@@ -78,8 +78,7 @@ public class OefMap_opgave {
         //map is voor beide key en value en set heeft alleen de value 
         //verschil tussen tree en hashmap treemap geen null keys en meerdere null values
         // hashmap mag maar 1 null key hebben en meerdere null values (hashmap is niet voor ordenen en treemap is voor ordenen)
-        TreeMap<Integer, Auteur> treemap = new TreeMap<>();
-        treemap.putAll(auteurs);
+        TreeMap<Integer, Auteur> treemap = new TreeMap<>(auteurs);
         toonAlleSleutels(treemap);
         toonAlleAuteurs(treemap);
     }
@@ -96,7 +95,9 @@ public class OefMap_opgave {
 		Per lijn wordt een auteursnr, naam en voornaam weergegeven.*/
         //---------------------------------------------------------------
 
-        System.out.println(map.values().toString());
+    	map.forEach((key, value) -> System.out.printf("%s %s%n", key, value));
+
+        System.out.println();
     }
 
     public static void main(String args[]) {

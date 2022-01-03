@@ -10,27 +10,35 @@ public class OefFruitMap_opgave {
         {"banaan", "mango", "citroen", "kiwi", "zespri", "pruim"},
         {"peche", "lichi", "kriek", "kers", "papaya"}};
 
-        List<String> list =           ;
+        List<String> list = new ArrayList<>();
         Scanner in = new Scanner(System.in);
 
         //declaratie + creatie map
         //------------------------------
-                    fruit = 
+               for (String[] k : kist) {
+                   list.addAll(Arrays.asList(k));
+               }
+
                             
         /*Berg de fruit list van vorige oefeningen in een boom
  op zodat dubbels ge�limineerd worden.
  Er moet ook de mogelijkheid zijn de bijhorende prijs
  (decimale waarde) bij te houden.*/
         //------------------------------------------------------------
-        list.
+               TreeMap<String, Double> fruit = new TreeMap<>();
+        list.forEach(el -> fruit.put(el, null));
         
         /*Doorloop de boom in lexicaal oplopende volgorde en vraag
  telkens de bijhorende prijs, die je mee in de boom opbergt.*/
         //------------------------------------------------------------
-        fruit.
+        fruit.forEach((k,v) ->{
+            System.out.printf("Prijs van %s : ", k,v);
+            double prijs = in.nextDouble();
+            fruit.replace(k, prijs);
+            System.out.println();
+        });
                 
-           System.out.printf("Prijs van %s : ", );
-           double prijs = in.nextDouble();
+
 
         
         
@@ -38,8 +46,10 @@ public class OefFruitMap_opgave {
  kolommen (naam : prijs) in lexicaal oplopende volgorde af
  op het scherm.*/
         //------------------------------------------------------------
-        fruit.
+        System.out.printf("%10s\t%10s\n", "NAAM", "PRIJS");
+        fruit.forEach((k,v)->{
+            System.out.printf("%s\t%.2f%n", k,v)  ;
+        });
                 
-             System.out.printf("%s\t%.2f%n",   
     }
 }
