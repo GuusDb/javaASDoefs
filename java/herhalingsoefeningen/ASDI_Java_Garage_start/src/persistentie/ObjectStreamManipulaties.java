@@ -13,8 +13,8 @@ import java.util.logging.Logger;
 public class ObjectStreamManipulaties {
 	
 	//Maak de methode generiek
-	/*//remove comment
-    public      leesObject(File naamBestand) {
+	//remove comment
+    public  <E>    leesObject(File naamBestand) {
     	
     	try (ObjectInputStream ois = 
     			new ObjectInputStream(Files.newInputStream(naamBestand.toPath()))){
@@ -25,7 +25,7 @@ public class ObjectStreamManipulaties {
         }
         return null;
     }     
-    */ //remove comment
+    */ remove comment
     
     //Maak de methode generiek
     /*//remove comment

@@ -28,9 +28,9 @@ public class SportclubController {
 		return sporterBeheerder.geefSportersPerAantalReductiebonnen();
 	}
 
-	/*public java.lang.String geefSporters() {
+	public java.lang.String geefSporters() {
 		return geefGesorteerdeCollectie(sporterBeheerder.getSportersLijst());
-	}*/
+	}
 
 	public String geefSportersMetEvenveelReductiebonnen(int sporterLidNr) {
 		Sporter sporter = sporterBeheerder.geefSporter(sporterLidNr);
