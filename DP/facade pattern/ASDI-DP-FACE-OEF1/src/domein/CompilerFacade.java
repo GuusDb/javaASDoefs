@@ -6,6 +6,7 @@ public class CompilerFacade {
 	private Scanner scanner;
 	private byteCodeStream bts;
 	
+	//dit is fout de compiler moet al deze objecten meegeven aan de facade kijk naar herhalingsoef 2 van dp
 	public CompilerFacade(String data) {
 		parse = new Parser();
 		builder = new ProgramNodeBuilder(data);
