@@ -11,33 +11,27 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ObjectStreamManipulaties {
-	
-	//Maak de methode generiek
-	//remove comment
-    public  <E>    leesObject(File naamBestand) {
-    	
-    	try (ObjectInputStream ois = 
-    			new ObjectInputStream(Files.newInputStream(naamBestand.toPath()))){
-            return ois.readObject();
-            
+
+    //Maak de methode generiek
+    public <E> E leesObject(File naamBestand) {
+
+        try (ObjectInputStream ois =
+                     new ObjectInputStream(Files.newInputStream(naamBestand.toPath()))) {
+            return (E) ois.readObject();
         } catch (IOException | ClassNotFoundException ex) {
             Logger.getLogger(ObjectStreamManipulaties.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
-    }     
-    */ remove comment
-    
+    }
+
     //Maak de methode generiek
-    /*//remove comment
-    public List< > leesObjecten(File naamBestand) {
-    	
-        List<    > li = new ArrayList<>();
-        
-        try (ObjectInputStream ois = 
-        		new ObjectInputStream(Files.newInputStream(naamBestand.toPath()))){
+    public <E> List<E> leesObjecten(File naamBestand) {
+
+        List<E> li = new ArrayList<>();
+
+        try (ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(naamBestand.toPath()))) {
             while (true) {
-                li.add(ois.readObject());
-                
+                li.add((E) ois.readObject());
             }
         } catch (EOFException e) {
             //EOF bereikt, continue
@@ -47,5 +41,6 @@ public class ObjectStreamManipulaties {
         }
         return null;
     }
-    */ //remove comment
+    
+    
 }

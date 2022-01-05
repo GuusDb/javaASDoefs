@@ -15,7 +15,7 @@ public class AutoMapper {
     
     public List<Auto> geefAutos() {
     	return new ObjectStreamManipulaties().leesObject(naamBestand); 
-    	return null; //comment
+    	//return null; //comment
     }
 
 }

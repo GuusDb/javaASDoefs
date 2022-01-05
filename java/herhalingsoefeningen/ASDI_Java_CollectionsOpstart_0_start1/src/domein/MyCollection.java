@@ -1,36 +1,28 @@
 package domein;
 
-import java.util.Collection;
-import java.util.LinkedList;
+import java.util.ArrayDeque;
+import java.util.List;
 import java.util.Queue;
 
-public class MyCollection <E extends Reductiebon>{
-	Queue<E> wachtrij;
-	
+public class MyCollection <T extends Reductiebon> {
+	private final Queue<T> lijst;
 	public MyCollection() {
-		wachtrij = new LinkedList<>();
+		lijst = new ArrayDeque<>();
 	}
 	
-	public E getElement() {
-		return wachtrij.peek();
+	public void addElement(T x) {
+		lijst.offer(x);
 	}
 	
-	public void addElement(E element) {
-		wachtrij.add(element);
+	public T getElement() {
+		return lijst.poll();
 	}
 	
-	public void addReeks(Collection<E> reeks) {
-		reeks.forEach(value -> wachtrij.add(value));
+	public void addReeks(List<? extends T> bonnen) {
+		lijst.addAll(bonnen);
 	}
-	
-	public double AverageList() {
-		double avg = 0.0;
-		int counter = 0;
-		for (E e: wachtrij) {
-			avg += e.getPercentage();
-			counter += 1;
-		}
-		
-		return avg/counter;
+
+	public double gemiddeldPercentage(){
+		return lijst.stream().mapToDouble(T::getPercentage).average().getAsDouble();
 	}
 }

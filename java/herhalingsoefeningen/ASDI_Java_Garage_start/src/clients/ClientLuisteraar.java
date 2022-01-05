@@ -16,7 +16,14 @@ public class ClientLuisteraar {
 		//      Wacht op het pakket en toon de ontvangen lijst van auto's af op het scherm
 		//      Beeindig de client
 
-		
+		try(DatagramSocket datagramSocket = new DatagramSocket(9999)){
+			byte[] buffer = new byte[100];
+			DatagramPacket dp = new DatagramPacket(buffer,buffer.length);
+			datagramSocket.receive(dp);
+			System.out.println(new String(dp.getData(),dp.getOffset(),dp.getLength()));
+		}catch(IOException io) {
+			io.printStackTrace();
+		}
 	}
 
 }

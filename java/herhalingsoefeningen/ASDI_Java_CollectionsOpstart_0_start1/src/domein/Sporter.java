@@ -3,7 +3,7 @@ package domein;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Sporter {
+public class Sporter implements Comparable<Sporter>{
 
 	private int lidNr;
 	private String naam, voornaam, email;
@@ -85,5 +85,11 @@ public class Sporter {
 	public void voegReductieBonToe(Reductiebon reductieBon) {
 		reductiebonLijst.add(reductieBon);
 	}
+
+	@Override
+	public int compareTo(Sporter other) {
+		return lidNr-other.lidNr;
+	}
+
 
 }
