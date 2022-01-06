@@ -20,7 +20,8 @@ public class ClientLuisteraar {
 			byte[] buffer = new byte[100];
 			DatagramPacket dp = new DatagramPacket(buffer,buffer.length);
 			datagramSocket.receive(dp);
-			System.out.println(new String(dp.getData(),dp.getOffset(),dp.getLength()));
+			System.out.println(new String(dp.getData(),dp.getOffset(),dp.getLength()
+					));
 		}catch(IOException io) {
 			io.printStackTrace();
 		}
