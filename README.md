@@ -10,4 +10,4 @@ have fun
 
 [observer](https://github.com/GuusDb/javaASDoefs/tree/master/java/java%20observerPattern)
 
-[herhaling met wel netwerk erin] (https://github.com/GuusDb/javaASDoefs/tree/master/java/herhalingsoefeningen)
+[herhaling met wel netwerk erin](https://github.com/GuusDb/javaASDoefs/tree/master/java/herhalingsoefeningen)
