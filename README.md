@@ -7,7 +7,7 @@ have fun
 [STREAM](https://github.com/GuusDb/javaASDoefs/tree/master/java/streams)\
 [GENERICS](https://github.com/GuusDb/javaASDoefs/tree/master/java/Generics)\
 [OBSERVER](https://github.com/GuusDb/javaASDoefs/tree/master/java/java%20observerPattern)\
-[HERHELING met wel netwerk erin](https://github.com/GuusDb/javaASDoefs/tree/master/java/herhalingsoefeningen)
+[Herhaling met netwerk erin](https://github.com/GuusDb/javaASDoefs/tree/master/java/herhalingsoefeningen)
 
 #TESTEN
 
